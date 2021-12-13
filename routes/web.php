@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\Home1Controller
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +23,4 @@ Route::get('hello/{name?}',[HelloController::class,'index'])->name('hello.index'
 //--------------------------------------------------------------------------------------------
 Route::get('home1', function (){return view('home1');});
 Route::get('home1', function (){return view('home1.index');});
+Route::get('home1',[\App\Http\Controllers\Home1Controller::class,'index'])->name('home1.index');
